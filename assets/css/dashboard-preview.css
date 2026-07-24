@@ -1,0 +1,558 @@
+/* ==========================================
+   SAVORA v2
+   DASHBOARD PREVIEW
+========================================== */
+
+.dashboard-preview{
+
+    padding:100px 0;
+
+    position:relative;
+
+}
+
+.dashboard-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 420px;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+.dashboard-content h2{
+
+    font-size:clamp(2rem,4vw,3.4rem);
+
+    margin-bottom:20px;
+
+}
+
+.dashboard-content p{
+
+    color:var(--text-secondary);
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+/* ==========================================
+   DASHBOARD CARD
+========================================== */
+
+.dashboard-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:32px;
+
+    padding:28px;
+
+    box-shadow:var(--shadow-lg);
+
+    backdrop-filter:blur(20px);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.dashboard-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    top:-120px;
+
+    right:-120px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+
+        rgba(34,197,94,.18),
+
+        transparent 70%
+
+    );
+
+}
+
+.balance-card{
+
+    position:relative;
+
+    z-index:2;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+
+    color:#fff;
+
+    border-radius:24px;
+
+    padding:22px;
+
+}
+
+.balance-card small{
+
+    opacity:.8;
+
+}
+
+.balance-card h3{
+
+    margin:12px 0;
+
+    font-size:2rem;
+
+}
+
+.balance-growth{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.18);
+
+    font-size:.85rem;
+
+}
+
+.preview-chart{
+
+    height:150px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:10px;
+
+    margin:30px 0;
+
+}
+
+.preview-chart span{
+
+    flex:1;
+
+    border-radius:999px 999px 0 0;
+
+    background:linear-gradient(
+        to top,
+        var(--primary-dark),
+        var(--primary)
+    );
+
+    animation:grow .8s ease;
+
+}
+
+.transactions{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.transaction-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 0;
+
+    border-top:1px solid var(--border);
+
+}
+
+.transaction-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.transaction-left img{
+
+    width:48px;
+
+    height:48px;
+
+    padding:10px;
+
+    border-radius:14px;
+
+    background:rgba(34,197,94,.12);
+
+}
+
+.transaction-info h4{
+
+    font-size:1rem;
+
+    margin-bottom:4px;
+
+}
+
+.transaction-info p{
+
+    font-size:.85rem;
+
+    color:var(--text-secondary);
+
+}
+
+.income{
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+.expense{
+
+    color:var(--danger);
+
+    font-weight:700;
+
+}
+
+.transaction-item{
+
+    transition:var(--transition);
+
+}
+
+.transaction-item:hover{
+
+    transform:translateX(6px);
+
+}
+
+@media(max-width:992px){
+
+.dashboard-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+.dashboard-content{
+
+text-align:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.dashboard-card{
+
+padding:22px;
+
+}
+
+.balance-card h3{
+
+font-size:1.7rem;
+
+}
+
+.preview-chart{
+
+height:120px;
+
+}
+
+}
+
+/* ==========================================
+   QUICK STATS
+========================================== */
+
+.dashboard-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:14px;
+
+    margin:28px 0;
+
+}
+
+.stat-card{
+
+    padding:16px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    transition:var(--transition);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:rgba(34,197,94,.3);
+
+}
+
+.stat-card h4{
+
+    font-size:1.2rem;
+
+    color:var(--primary);
+
+    margin-bottom:6px;
+
+}
+
+.stat-card p{
+
+    font-size:.8rem;
+
+    color:var(--text-secondary);
+
+}
+
+/* ==========================================
+   SAVING GOAL
+========================================== */
+
+.goal-card{
+
+    margin-top:28px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid var(--border);
+
+}
+
+.goal-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:16px;
+
+}
+
+.goal-header h4{
+
+    font-size:1rem;
+
+}
+
+.goal-header span{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:10px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.progress-bar{
+
+    width:72%;
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+/* ==========================================
+   QUICK ACTIONS
+========================================== */
+
+.quick-actions{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:14px;
+
+    margin-top:28px;
+
+}
+
+.action-btn{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:18px 12px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid var(--border);
+
+    transition:var(--transition);
+
+}
+
+.action-btn:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(34,197,94,.08);
+
+}
+
+.action-btn img{
+
+    width:26px;
+
+    height:26px;
+
+}
+
+.action-btn span{
+
+    font-size:.82rem;
+
+    color:var(--text-secondary);
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+.dashboard-card{
+
+    animation:floatCard 6s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@media(max-width:640px){
+
+    .dashboard-stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .quick-actions{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .transaction-left img{
+
+        width:42px;
+
+        height:42px;
+
+        padding:8px;
+
+    }
+
+}

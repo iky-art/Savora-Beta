@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Settings - Savora</title>
+
+<link rel="icon" href="../assets/svg/favicon.svg">
+
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard">
+
+
+<aside class="sidebar">
+
+
+<div class="sidebar-logo">
+
+<img src="../assets/svg/logo.svg">
+
+<span class="sidebar-title">
+Savora
+</span>
+
+</div>
+
+
+<nav class="sidebar-menu">
+
+
+<a href="dashboard.html"
+class="sidebar-link">
+
+<img src="../assets/svg/wallet.svg" width="24">
+
+<span>
+Dashboard
+</span>
+
+</a>
+
+
+
+<a href="profile.html"
+class="sidebar-link">
+
+<img src="../assets/svg/profile.svg" width="24">
+
+<span>
+Profile
+</span>
+
+</a>
+
+
+
+<a class="sidebar-link active">
+
+<img src="../assets/svg/settings.svg" width="24">
+
+<span>
+Settings
+</span>
+
+</a>
+
+
+</nav>
+
+
+</aside>
+
+
+
+
+
+<main class="main">
+
+
+<header class="topbar">
+
+
+<h1>
+Settings
+</h1>
+
+
+</header>
+
+
+
+
+
+
+
+<section class="card">
+
+
+<h2>
+Tampilan
+</h2>
+
+
+<p>
+Atur tema aplikasi
+</p>
+
+
+<button
+class="btn btn-primary"
+onclick="Theme.toggle()">
+
+Ganti Tema 🌙
+
+</button>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="card"
+style="margin-top:24px">
+
+
+<h2>
+Tentang Savora
+</h2>
+
+
+<p>
+Savora Finance Tracker
+</p>
+
+
+<p>
+Versi:
+<strong>
+1.0.0
+</strong>
+</p>
+
+
+<p>
+Smart money management untuk masa depan.
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="card"
+style="margin-top:24px">
+
+
+<h2>
+Data Aplikasi
+</h2>
+
+
+<p>
+Hapus seluruh data lokal Savora.
+</p>
+
+
+<button
+class="btn btn-danger"
+onclick="resetData()">
+
+Reset Data
+
+</button>
+
+
+</section>
+
+
+
+
+
+
+<button
+class="btn btn-outline"
+style="margin-top:24px"
+onclick="Auth.logout()">
+
+Logout
+
+</button>
+
+
+
+</main>
+
+
+</div>
+
+
+
+
+
+
+
+<script src="../assets/js/storage.js"></script>
+
+<script src="../assets/js/theme.js"></script>
+
+<script src="../assets/js/auth.js"></script>
+
+
+
+<script>
+
+
+function resetData(){
+
+
+const confirmReset =
+confirm(
+"Yakin ingin menghapus semua data Savora?"
+);
+
+
+
+if(confirmReset){
+
+
+Storage.clear();
+
+
+alert(
+"Data berhasil dihapus."
+);
+
+
+
+location.href="register.html";
+
+
+}
+
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>

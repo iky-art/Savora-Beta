@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Goals - Savora</title>
+
+<link rel="icon" href="../assets/svg/favicon.svg">
+
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard">
+
+
+<aside class="sidebar">
+
+
+<div class="sidebar-logo">
+
+<img src="../assets/svg/logo.svg">
+
+<span class="sidebar-title">
+Savora
+</span>
+
+</div>
+
+
+
+<nav class="sidebar-menu">
+
+
+<a href="dashboard.html"
+class="sidebar-link">
+
+<img src="../assets/svg/wallet.svg" width="24">
+
+<span>
+Dashboard
+</span>
+
+</a>
+
+
+
+<a href="transactions.html"
+class="sidebar-link">
+
+<img src="../assets/svg/income.svg" width="24">
+
+<span>
+Transaksi
+</span>
+
+</a>
+
+
+
+<a href="savings.html"
+class="sidebar-link">
+
+<img src="../assets/svg/saving.svg" width="24">
+
+<span>
+Tabungan
+</span>
+
+</a>
+
+
+
+<a class="sidebar-link active">
+
+<img src="../assets/svg/goal.svg" width="24">
+
+<span>
+Target
+</span>
+
+</a>
+
+
+</nav>
+
+
+</aside>
+
+
+
+
+
+<main class="main">
+
+
+<header class="topbar">
+
+<h1>
+Target Keuangan
+</h1>
+
+
+<button
+class="btn btn-outline"
+onclick="Theme.toggle()">
+
+🌙
+
+</button>
+
+
+</header>
+
+
+
+
+
+<section class="card">
+
+
+<h2>
+Buat Target Baru
+</h2>
+
+
+
+<form id="goalForm"
+class="auth-form">
+
+
+<div class="form-group">
+
+<label class="form-label">
+Nama Target
+</label>
+
+<input
+id="goalName"
+class="input"
+placeholder="Contoh: Beli Laptop"
+required>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label class="form-label">
+Target Nominal
+</label>
+
+<input
+id="goalAmount"
+type="number"
+class="input"
+placeholder="5000000"
+required>
+
+</div>
+
+
+
+<button class="btn btn-primary">
+
+Tambah Target
+
+</button>
+
+
+</form>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="card"
+style="margin-top:24px">
+
+
+<h2>
+Daftar Target
+</h2>
+
+
+<div id="goalList"
+class="transaction-list">
+
+</div>
+
+
+</section>
+
+
+
+
+</main>
+
+
+</div>
+
+
+
+
+
+
+
+<script src="../assets/js/storage.js"></script>
+
+<script src="../assets/js/theme.js"></script>
+
+
+
+<script>
+
+
+const goalKey =
+"savora_goals";
+
+
+
+function getGoals(){
+
+return Storage.get(goalKey) || [];
+
+}
+
+
+
+function saveGoals(data){
+
+Storage.set(goalKey,data);
+
+}
+
+
+
+
+function renderGoals(){
+
+
+const list =
+document.getElementById("goalList");
+
+
+const goals =
+getGoals();
+
+
+
+if(goals.length===0){
+
+list.innerHTML =
+"<p>Belum ada target.</p>";
+
+return;
+
+}
+
+
+
+list.innerHTML =
+goals.map((goal,index)=>`
+
+
+<div class="transaction-item">
+
+
+<div>
+
+<strong>
+${goal.name}
+</strong>
+
+<p>
+Target:
+Rp${Number(goal.amount)
+.toLocaleString("id-ID")}
+</p>
+
+</div>
+
+
+<button
+class="btn btn-danger"
+onclick="deleteGoal(${index})">
+
+Hapus
+
+</button>
+
+
+</div>
+
+
+`).join("");
+
+}
+
+
+
+
+document
+.getElementById("goalForm")
+.addEventListener(
+"submit",
+(e)=>{
+
+
+e.preventDefault();
+
+
+
+const goals =
+getGoals();
+
+
+
+goals.push({
+
+name:goalName.value,
+
+amount:Number(goalAmount.value)
+
+});
+
+
+
+saveGoals(goals);
+
+
+e.target.reset();
+
+
+renderGoals();
+
+
+});
+
+
+
+
+
+function deleteGoal(index){
+
+const goals =
+getGoals();
+
+
+goals.splice(index,1);
+
+
+saveGoals(goals);
+
+
+renderGoals();
+
+}
+
+
+
+renderGoals();
+
+
+</script>
+
+
+</body>
+
+</html>

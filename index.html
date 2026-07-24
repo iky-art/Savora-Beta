@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Savora adalah aplikasi pencatat keuangan modern untuk mengelola pemasukan, pengeluaran, tabungan, dan target finansial.">
+
+    <meta
+        name="keywords"
+        content="Savora, Finance, Money, Budget, Wallet, Keuangan, Tabungan">
+
+    <meta
+        name="author"
+        content="Risky Pratama">
+
+    <meta
+        name="theme-color"
+        content="#22c55e">
+
+    <meta
+        name="color-scheme"
+        content="dark light">
+
+    <title>Savora • Smart Finance Tracker</title>
+
+    <!-- Favicon -->
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="assets/svg/favicon.svg">
+
+    <!-- PWA -->
+
+    <link
+        rel="manifest"
+        href="manifest.json">
+
+    <!-- Fonts -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/variables.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/components.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/dashboard-preview.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+     LOADER
+========================================== -->
+
+<div id="loader" class="loader">
+
+    <div class="loader-logo">
+
+        <img
+            src="assets/svg/logo.svg"
+            alt="Savora Logo">
+
+    </div>
+
+    <h2>Savora</h2>
+
+    <p>Smart Finance Tracker</p>
+
+</div>
+
+<!-- ==========================================
+     MOBILE MENU
+========================================== -->
+
+<nav
+    class="mobile-menu"
+    id="mobileMenu">
+
+    <a href="#features">Fitur</a>
+
+    <a href="#preview">Preview</a>
+
+    <a href="#goals">Target</a>
+
+    <a href="#faq">FAQ</a>
+
+    <a
+        href="pages/login.html"
+        class="btn btn-outline">
+
+        Login
+
+    </a>
+
+    <a
+        href="pages/register.html"
+        class="btn btn-primary">
+
+        Mulai Gratis
+
+    </a>
+
+</nav>
+
+    <!-- ==========================================
+     HEADER / NAVBAR
+========================================== -->
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+        <!-- Logo -->
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="assets/svg/logo.svg"
+                alt="Savora">
+
+            <span>Savora</span>
+
+        </a>
+
+        <!-- Desktop Navigation -->
+
+        <nav class="nav-links">
+
+            <a href="#features">Fitur</a>
+
+            <a href="#preview">Preview</a>
+
+            <a href="#goals">Target</a>
+
+            <a href="#faq">FAQ</a>
+
+        </nav>
+
+        <!-- Desktop Button -->
+
+        <div class="nav-actions">
+
+            <a
+                href="pages/login.html"
+                class="btn btn-outline">
+
+                Login
+
+            </a>
+
+            <a
+                href="pages/register.html"
+                class="btn btn-primary">
+
+                Mulai Gratis
+
+            </a>
+
+        </div>
+
+        <!-- Hamburger -->
+
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Toggle Menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+    <!-- ==========================================
+     HERO
+========================================== -->
+
+<section class="hero">
+
+    <div class="container hero-container">
+
+        <!-- Hero Content -->
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+
+                ✨ Smart Finance Tracker
+
+            </div>
+
+            <h1 class="hero-title">
+
+                Kelola
+                <span>Keuangan</span>
+                Dengan Cara
+                Yang Lebih Pintar.
+
+            </h1>
+
+            <p class="hero-description">
+
+                Savora membantu kamu mencatat pemasukan,
+                pengeluaran, tabungan, dan target keuangan
+                dalam satu aplikasi yang cepat, aman,
+                modern, dan mudah digunakan setiap hari.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="pages/register.html"
+                    class="btn btn-primary">
+
+                    Mulai Gratis
+
+                </a>
+
+                <a
+                    href="#features"
+                    class="btn btn-outline">
+
+                    Pelajari Lebih Lanjut
+
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div class="hero-stat">
+
+                    <h3>10K+</h3>
+
+                    <p>Transaksi</p>
+
+                </div>
+
+                <div class="hero-stat">
+
+                    <h3>99%</h3>
+
+                    <p>Keamanan</p>
+
+                </div>
+
+                <div class="hero-stat">
+
+                    <h3>24/7</h3>
+
+                    <p>Akses</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Dashboard Preview -->
+
+        <div class="hero-image">
+
+            <div class="dashboard-card">
+
+                <div class="balance-card">
+
+                    <small>Total Saldo</small>
+
+                    <h3>Rp12.500.000</h3>
+
+                    <span class="balance-growth">
+
+                        ▲ +12% bulan ini
+
+                    </span>
+
+                </div>
+
+                <div class="dashboard-stats">
+
+                    <div class="stat-card">
+
+                        <h4>+5Jt</h4>
+
+                        <p>Pemasukan</p>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <h4>-1.2Jt</h4>
+
+                        <p>Pengeluaran</p>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <h4>72%</h4>
+
+                        <p>Target</p>
+
+                    </div>
+
+                </div>
+
+                <div class="preview-chart">
+
+                    <span style="height:40%"></span>
+                    <span style="height:75%"></span>
+                    <span style="height:55%"></span>
+                    <span style="height:90%"></span>
+                    <span style="height:65%"></span>
+                    <span style="height:100%"></span>
+
+                </div>
+
+                <div class="goal-card">
+
+                    <div class="goal-header">
+
+                        <h4>Liburan Bali</h4>
+
+                        <span>72%</span>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div class="progress-bar"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================
+     TRUSTED
+========================================== -->
+
+<section class="trusted">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-badge">
+
+                💚 Mengapa Memilih Savora?
+
+            </span>
+
+            <h2>
+
+                Dibangun Untuk Mengelola
+                Keuangan Dengan Lebih Mudah
+
+            </h2>
+
+            <p>
+
+                Fokus pada pengalaman pengguna,
+                performa tinggi, dan keamanan data
+                agar kamu bisa mengatur keuangan
+                dengan nyaman setiap hari.
+
+            </p>
+
+        </div>
+
+        <div class="trusted-grid">
+
+            <div class="trusted-card">
+
+                <h3>100%</h3>
+
+                <p>Gratis Digunakan</p>
+
+            </div>
+
+            <div class="trusted-card">
+
+                <h3>⚡</h3>
+
+                <p>Ringan & Cepat</p>
+
+            </div>
+
+            <div class="trusted-card">
+
+                <h3>🔒</h3>
+
+                <p>Privasi Terjaga</p>
+
+            </div>
+
+            <div class="trusted-card">
+
+                <h3>📱</h3>
+
+                <p>Mobile Friendly</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================
+     FEATURES
+========================================== -->
+
+<section
+    class="features"
+    id="features">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-badge">
+
+                🚀 Fitur Unggulan
+
+            </span>
+
+            <h2>
+
+                Semua Yang Kamu Butuhkan
+                Dalam Satu Aplikasi
+
+            </h2>
+
+            <p>
+
+                Savora dirancang agar pencatatan
+                keuangan menjadi lebih mudah,
+                cepat, dan nyaman digunakan
+                setiap hari.
+
+            </p>
+
+        </div>
+
+        <div class="features-grid">
+
+            <!-- Card 1 -->
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img
+                        src="assets/svg/wallet.svg"
+                        alt="Wallet">
+
+                </div>
+
+                <h3>Dompet Digital</h3>
+
+                <p>
+
+                    Kelola saldo utama dengan
+                    tampilan sederhana dan
+                    mudah dipahami.
+
+                </p>
+
+            </article>
+
+            <!-- Card 2 -->
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img
+                        src="assets/svg/income.svg"
+                        alt="Income">
+
+                </div>
+
+                <h3>Pemasukan</h3>
+
+                <p>
+
+                    Catat seluruh pemasukan
+                    agar kondisi keuangan
+                    selalu terpantau.
+
+                </p>
+
+            </article>
+
+            <!-- Card 3 -->
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img
+                        src="assets/svg/expense.svg"
+                        alt="Expense">
+
+                </div>
+
+                <h3>Pengeluaran</h3>
+
+                <p>
+
+                    Pantau pengeluaran harian
+                    agar pengelolaan uang
+                    menjadi lebih bijak.
+
+                </p>
+
+            </article>
+
+            <!-- Card 4 -->
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img
+                        src="assets/svg/goal.svg"
+                        alt="Goal">
+
+                </div>
+
+                <h3>Target Tabungan</h3>
+
+                <p>
+
+                    Tetapkan target finansial
+                    dan lihat progresnya
+                    secara real-time.
+
+                </p>
+
+            </article>
+
+            <!-- Card 5 -->
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img
+                        src="assets/svg/analytics.svg"
+                        alt="Analytics">
+
+                </div>
+
+                <h3>Analitik</h3>
+
+                <p>
+
+                    Lihat grafik pemasukan
+                    dan pengeluaran untuk
+                    membantu mengambil keputusan.
+
+                </p>
+
+            </article>
+
+            <!-- Card 6 -->
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+
+                    <img
+                        src="assets/svg/report.svg"
+                        alt="Report">
+
+                </div>
+
+                <h3>Laporan</h3>
+
+                <p>
+
+                    Ekspor laporan keuangan
+                    dengan cepat kapan saja
+                    saat dibutuhkan.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================
+     DASHBOARD PREVIEW
+========================================== -->
+
+<section
+    class="dashboard-preview"
+    id="preview">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-badge">
+
+                📊 Dashboard Preview
+
+            </span>
+
+            <h2>
+
+                Lihat Cara Savora
+                Membantu Mengelola
+                Keuanganmu
+
+            </h2>
+
+            <p>
+
+                Semua informasi penting
+                ditampilkan dalam satu dashboard
+                yang bersih, modern, dan mudah
+                dipahami.
+
+            </p>
+
+        </div>
+
+        <div class="dashboard-wrapper">
+
+            <!-- Left Content -->
+
+            <div class="dashboard-content">
+
+                <h2>
+
+                    Semua Data Keuangan
+                    Dalam Satu Tampilan
+
+                </h2>
+
+                <p>
+
+                    Pantau saldo, pemasukan,
+                    pengeluaran, target tabungan,
+                    serta riwayat transaksi
+                    secara real-time.
+
+                </p>
+
+                <ul class="dashboard-list">
+
+                    <li>✅ Total Saldo Real-Time</li>
+
+                    <li>✅ Grafik Pemasukan & Pengeluaran</li>
+
+                    <li>✅ Riwayat Transaksi</li>
+
+                    <li>✅ Target Tabungan</li>
+
+                    <li>✅ Statistik Bulanan</li>
+
+                </ul>
+
+            </div>
+
+            <!-- Dashboard Card -->
+
+            <div class="dashboard-card">
+
+                <!-- Balance -->
+
+                <div class="balance-card">
+
+                    <small>Total Saldo</small>
+
+                    <h3>
+
+                        Rp12.500.000
+
+                    </h3>
+
+                    <span class="balance-growth">
+
+                        ▲ +12% Bulan Ini
+
+                    </span>
+
+                </div>
+
+                <!-- Stats -->
+
+                <div class="dashboard-stats">
+
+                    <div class="stat-card">
+
+                        <h4>+5JT</h4>
+
+                        <p>Pemasukan</p>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <h4>-1JT</h4>
+
+                        <p>Pengeluaran</p>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <h4>72%</h4>
+
+                        <p>Target</p>
+
+                    </div>
+
+                </div>
+
+                <!-- Chart -->
+
+                <div class="preview-chart">
+
+                    <span style="height:45%"></span>
+
+                    <span style="height:75%"></span>
+
+                    <span style="height:55%"></span>
+
+                    <span style="height:95%"></span>
+
+                    <span style="height:70%"></span>
+
+                    <span style="height:100%"></span>
+
+                </div>
+
+                <!-- Transactions -->
+
+                <div class="transactions">
+
+                    <div class="transaction-item">
+
+                        <div class="transaction-left">
+
+                            <img
+                                src="assets/svg/income.svg"
+                                alt="Income">
+
+                            <div class="transaction-info">
+
+                                <h4>Gaji Bulanan</h4>
+
+                                <p>Hari Ini</p>
+
+                            </div>
+
+                        </div>
+
+                        <span class="income">
+
+                            +Rp5.000.000
+
+                        </span>
+
+                    </div>
+
+                    <div class="transaction-item">
+
+                        <div class="transaction-left">
+
+                            <img
+                                src="assets/svg/expense.svg"
+                                alt="Expense">
+
+                            <div class="transaction-info">
+
+                                <h4>Makan</h4>
+
+                                <p>Hari Ini</p>
+
+                            </div>
+
+                        </div>
+
+                        <span class="expense">
+
+                            -Rp50.000
+
+                        </span>
+
+                    </div>
+
+                    <div class="transaction-item">
+
+                        <div class="transaction-left">
+
+                            <img
+                                src="assets/svg/saving.svg"
+                                alt="Saving">
+
+                            <div class="transaction-info">
+
+                                <h4>Tabungan</h4>
+
+                                <p>Hari Ini</p>
+
+                            </div>
+
+                        </div>
+
+                        <span class="income">
+
+                            +Rp500.000
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================
+     GOALS
+========================================== -->
+
+<section
+    class="goals"
+    id="goals">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-badge">
+
+                🎯 Financial Goals
+
+            </span>
+
+            <h2>
+
+                Capai Target
+                Keuanganmu
+                Dengan Lebih Mudah
+
+            </h2>
+
+            <p>
+
+                Buat target tabungan,
+                pantau progresnya,
+                dan tetap termotivasi
+                hingga tujuanmu tercapai.
+
+            </p>
+
+        </div>
+
+        <div class="goals-grid">
+
+            <!-- Goal 1 -->
+
+            <article class="goal-card">
+
+                <div class="goal-icon">
+
+                    <img
+                        src="assets/svg/goal.svg"
+                        alt="Goal">
+
+                </div>
+
+                <h3>Liburan ke Bali</h3>
+
+                <p>
+
+                    Rp7.200.000 / Rp10.000.000
+
+                </p>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        style="width:72%">
+
+                    </div>
+
+                </div>
+
+                <span class="goal-percent">
+
+                    72% Tercapai
+
+                </span>
+
+            </article>
+
+            <!-- Goal 2 -->
+
+            <article class="goal-card">
+
+                <div class="goal-icon">
+
+                    <img
+                        src="assets/svg/saving.svg"
+                        alt="Saving">
+
+                </div>
+
+                <h3>Laptop Baru</h3>
+
+                <p>
+
+                    Rp4.500.000 / Rp8.000.000
+
+                </p>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        style="width:56%">
+
+                    </div>
+
+                </div>
+
+                <span class="goal-percent">
+
+                    56% Tercapai
+
+                </span>
+
+            </article>
+
+            <!-- Goal 3 -->
+
+            <article class="goal-card">
+
+                <div class="goal-icon">
+
+                    <img
+                        src="assets/svg/wallet.svg"
+                        alt="Wallet">
+
+                </div>
+
+                <h3>Dana Darurat</h3>
+
+                <p>
+
+                    Rp9.000.000 / Rp10.000.000
+
+                </p>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        style="width:90%">
+
+                    </div>
+
+                </div>
+
+                <span class="goal-percent">
+
+                    90% Tercapai
+
+                </span>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================
+     CTA
+========================================== -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-card">
+
+            <span class="section-badge">
+
+                🚀 Mulai Sekarang
+
+            </span>
+
+            <h2>
+
+                Saatnya Mengelola
+                Keuangan Dengan
+                Lebih Cerdas
+
+            </h2>
+
+            <p>
+
+                Bergabunglah dengan Savora dan mulai
+                mencatat pemasukan, pengeluaran,
+                tabungan, serta target keuangan
+                dalam satu aplikasi yang modern,
+                cepat, dan mudah digunakan.
+
+            </p>
+
+            <div class="cta-buttons">
+
+                <a
+                    href="pages/register.html"
+                    class="btn btn-primary">
+
+                    Mulai Gratis
+
+                </a>
+
+                <a
+                    href="#preview"
+                    class="btn btn-outline">
+
+                    Lihat Dashboard
+
+                </a>
+
+            </div>
+
+            <div class="cta-stats">
+
+                <div class="cta-stat">
+
+                    <h3>100%</h3>
+
+                    <p>Gratis Digunakan</p>
+
+                </div>
+
+                <div class="cta-stat">
+
+                    <h3>🔒</h3>
+
+                    <p>Privasi Terjaga</p>
+
+                </div>
+
+                <div class="cta-stat">
+
+                    <h3>⚡</h3>
+
+                    <p>Ringan & Cepat</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================
+     FAQ
+========================================== -->
+
+<section
+    class="faq"
+    id="faq">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-badge">
+
+                ❓ FAQ
+
+            </span>
+
+            <h2>
+
+                Pertanyaan
+                Yang Sering Ditanyakan
+
+            </h2>
+
+            <p>
+
+                Temukan jawaban untuk
+                pertanyaan yang paling
+                sering diajukan mengenai Savora.
+
+            </p>
+
+        </div>
+
+        <div class="faq-list">
+
+            <!-- FAQ 1 -->
+
+            <details class="faq-item">
+
+                <summary>
+
+                    Apa itu Savora?
+
+                </summary>
+
+                <p>
+
+                    Savora adalah aplikasi
+                    pencatat keuangan yang
+                    membantu mengelola pemasukan,
+                    pengeluaran, tabungan,
+                    dan target finansial
+                    dalam satu tempat.
+
+                </p>
+
+            </details>
+
+            <!-- FAQ 2 -->
+
+            <details class="faq-item">
+
+                <summary>
+
+                    Apakah Savora gratis?
+
+                </summary>
+
+                <p>
+
+                    Ya. Savora dapat digunakan
+                    secara gratis.
+                    Di masa depan mungkin akan ada
+                    fitur premium opsional.
+
+                </p>
+
+            </details>
+
+            <!-- FAQ 3 -->
+
+            <details class="faq-item">
+
+                <summary>
+
+                    Di mana data saya disimpan?
+
+                </summary>
+
+                <p>
+
+                    Data akan disimpan secara aman.
+                    Pada versi offline, data dapat
+                    disimpan di perangkat pengguna.
+                    Pada versi online, data akan
+                    tersimpan di server dengan
+                    perlindungan yang sesuai.
+
+                </p>
+
+            </details>
+
+            <!-- FAQ 4 -->
+
+            <details class="faq-item">
+
+                <summary>
+
+                    Apakah Savora bisa digunakan di HP?
+
+                </summary>
+
+                <p>
+
+                    Ya. Savora dirancang
+                    mobile-first sehingga nyaman
+                    digunakan di smartphone,
+                    tablet, maupun desktop.
+
+                </p>
+
+            </details>
+
+            <!-- FAQ 5 -->
+
+            <details class="faq-item">
+
+                <summary>
+
+                    Apakah saya bisa membuat target tabungan?
+
+                </summary>
+
+                <p>
+
+                    Tentu.
+                    Kamu bisa membuat beberapa
+                    target keuangan dan memantau
+                    progresnya melalui dashboard.
+
+                </p>
+
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <!-- Brand -->
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+
+                    <img
+                        src="assets/svg/logo.svg"
+                        alt="Savora">
+
+                    <h2>Savora</h2>
+
+                </div>
+
+                <p>
+
+                    Smart Finance Tracker yang
+                    membantu mengelola pemasukan,
+                    pengeluaran, tabungan,
+                    dan target keuangan dengan
+                    lebih mudah.
+
+                </p>
+
+            </div>
+
+            <!-- Product -->
+
+            <div>
+
+                <h3 class="footer-title">
+
+                    Produk
+
+                </h3>
+
+                <div class="footer-links">
+
+                    <a href="#features">
+
+                        Fitur
+
+                    </a>
+
+                    <a href="#preview">
+
+                        Dashboard
+
+                    </a>
+
+                    <a href="#goals">
+
+                        Target
+
+                    </a>
+
+                    <a href="#faq">
+
+                        FAQ
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Account -->
+
+            <div>
+
+                <h3 class="footer-title">
+
+                    Akun
+
+                </h3>
+
+                <div class="footer-links">
+
+                    <a href="pages/login.html">
+
+                        Login
+
+                    </a>
+
+                    <a href="pages/register.html">
+
+                        Register
+
+                    </a>
+
+                    <a href="#">
+
+                        Kebijakan Privasi
+
+                    </a>
+
+                    <a href="#">
+
+                        Syarat & Ketentuan
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Savora.
+                All Rights Reserved.
+
+            </p>
+
+            <p>
+
+                Made with 💚 by
+                <strong>Risky Pratama</strong>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- ==========================================
+     BACK TO TOP
+========================================== -->
+
+<button
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Back To Top">
+
+    ↑
+
+</button>
+
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/storage.js"></script>
+
+<script src="assets/js/goals.js"></script>
+<script src="assets/js/analytics.js"></script>
+<script src="assets/js/notifications.js"></script>
+<script src="assets/js/settings.js"></script>
+<script src="assets/js/auth.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="assets/js/landing.js"></script>
+<script src="assets/js/app.js"></script>
+
+  <script>
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+        loader.classList.add("hide");
+    }, 1000);
+});
+  </scrip>
+
+</body>
+</html>

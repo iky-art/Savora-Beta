@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 128 128"
+     fill="none">
+
+  <defs>
+    <linearGradient id="savoraGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%">
+      <stop offset="0%" stop-color="#43A66E"/>
+      <stop offset="100%" stop-color="#2E8B57"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect
+      x="8"
+      y="8"
+      width="112"
+      height="112"
+      rx="32"
+      fill="url(#savoraGradient)"/>
+
+  <!-- Letter S -->
+  <path
+      d="M82 40
+         C76 32 62 30 50 36
+         C40 41 40 52 52 56
+         L72 62
+         C83 65 84 76 74 83
+         C64 90 50 89 42 80"
+      stroke="white"
+      stroke-width="8"
+      stroke-linecap="round"
+      stroke-linejoin="round"/>
+
+  <!-- Leaf -->
+  <path
+      d="M78 28
+         C86 24 96 27 98 36
+         C90 36 82 34 78 28Z"
+      fill="white"/>
+
+</svg>

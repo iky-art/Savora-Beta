@@ -1,0 +1,232 @@
+/* ==========================================
+   SAVORA v2
+   AUTH
+========================================== */
+
+.auth{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:40px 20px;
+
+    background:var(--background);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.auth::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    top:-200px;
+
+    right:-200px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+
+        rgba(34,197,94,.15),
+
+        transparent 70%
+
+    );
+
+}
+
+.auth-card{
+
+    width:100%;
+
+    max-width:460px;
+
+    padding:40px;
+
+    border-radius:32px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow-lg);
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.auth-header{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.auth-logo{
+
+    width:80px;
+
+    margin:auto auto 20px;
+
+}
+
+.auth-header h1{
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+
+}
+
+.auth-header p{
+
+    color:var(--text-secondary);
+
+}
+
+.auth-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.form-group label{
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+}
+
+.form-input{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid var(--border);
+
+    color:var(--text);
+
+    transition:var(--transition);
+
+}
+
+.form-input::placeholder{
+
+    color:var(--text-secondary);
+
+}
+
+.form-input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(34,197,94,.15);
+
+}
+
+.form-options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:.9rem;
+
+}
+
+.form-options label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.form-options a{
+
+    color:var(--primary);
+
+}
+
+.auth-form .btn{
+
+    margin-top:10px;
+
+    width:100%;
+
+}
+
+.auth-footer{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    color:var(--text-secondary);
+
+}
+
+.auth-footer a{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+@media(max-width:480px){
+
+.auth-card{
+
+padding:28px 22px;
+
+}
+
+.auth-header h1{
+
+font-size:1.7rem;
+
+}
+
+}

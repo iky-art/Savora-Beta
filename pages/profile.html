@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Profile - Savora</title>
+
+<link rel="icon" href="../assets/svg/favicon.svg">
+
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard">
+
+
+<aside class="sidebar">
+
+
+<div class="sidebar-logo">
+
+<img src="../assets/svg/logo.svg">
+
+<span class="sidebar-title">
+Savora
+</span>
+
+</div>
+
+
+<nav class="sidebar-menu">
+
+
+<a href="dashboard.html"
+class="sidebar-link">
+
+<img src="../assets/svg/wallet.svg" width="24">
+
+<span>
+Dashboard
+</span>
+
+</a>
+
+
+<a href="transactions.html"
+class="sidebar-link">
+
+<img src="../assets/svg/income.svg" width="24">
+
+<span>
+Transaksi
+</span>
+
+</a>
+
+
+<a class="sidebar-link active">
+
+<img src="../assets/svg/profile.svg" width="24">
+
+<span>
+Profile
+</span>
+
+</a>
+
+
+<a href="settings.html"
+class="sidebar-link">
+
+<img src="../assets/svg/settings.svg" width="24">
+
+<span>
+Settings
+</span>
+
+</a>
+
+
+</nav>
+
+
+</aside>
+
+
+
+
+
+<main class="main">
+
+
+<header class="topbar">
+
+<h1>
+Profile
+</h1>
+
+
+<button
+class="btn btn-outline"
+onclick="Theme.toggle()">
+
+🌙
+
+</button>
+
+
+</header>
+
+
+
+
+
+<section class="card">
+
+
+<div style="text-align:center">
+
+
+<img src="../assets/svg/profile.svg"
+width="80">
+
+
+<h2 id="userName">
+User
+</h2>
+
+
+<p id="userEmail">
+email
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="card"
+style="margin-top:24px">
+
+
+<h2>
+Informasi Akun
+</h2>
+
+
+<form id="profileForm"
+class="auth-form">
+
+
+<div class="form-group">
+
+<label class="form-label">
+Nama
+</label>
+
+<input
+id="name"
+class="input">
+
+</div>
+
+
+
+<div class="form-group">
+
+<label class="form-label">
+Email
+</label>
+
+<input
+id="email"
+class="input"
+disabled>
+
+</div>
+
+
+
+<button class="btn btn-primary">
+
+Simpan
+
+</button>
+
+
+</form>
+
+
+</section>
+
+
+
+
+
+
+
+<button
+class="btn btn-danger"
+style="margin-top:24px"
+onclick="Auth.logout()">
+
+Logout
+
+</button>
+
+
+
+
+
+</main>
+
+
+</div>
+
+
+
+
+
+
+
+<script src="../assets/js/storage.js"></script>
+
+<script src="../assets/js/theme.js"></script>
+
+<script src="../assets/js/auth.js"></script>
+
+
+
+<script>
+
+
+const user =
+Auth.currentUser();
+
+
+
+if(user){
+
+
+userName.textContent =
+user.name;
+
+
+userEmail.textContent =
+user.email;
+
+
+name.value =
+user.name;
+
+
+email.value =
+user.email;
+
+
+}
+
+
+
+
+
+profileForm.addEventListener(
+"submit",
+(e)=>{
+
+
+e.preventDefault();
+
+
+const users =
+Storage.get("savora_users") || [];
+
+
+
+const index =
+users.findIndex(
+u=>u.email===user.email
+);
+
+
+
+if(index !== -1){
+
+
+users[index].name =
+name.value;
+
+
+Storage.set(
+"savora_users",
+users
+);
+
+
+
+Storage.set(
+Storage.keys.user,
+users[index]
+);
+
+
+
+alert("Profile berhasil diperbarui");
+
+
+location.reload();
+
+
+}
+
+
+});
+
+
+
+</script>
+
+
+</body>
+
+</html>

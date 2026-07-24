@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Analytics - Savora</title>
+
+<link rel="icon" href="../assets/svg/favicon.svg">
+
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard">
+
+
+<aside class="sidebar">
+
+
+<div class="sidebar-logo">
+
+<img src="../assets/svg/logo.svg">
+
+<span class="sidebar-title">
+Savora
+</span>
+
+</div>
+
+
+
+<nav class="sidebar-menu">
+
+
+<a href="dashboard.html"
+class="sidebar-link">
+
+<img src="../assets/svg/wallet.svg" width="24">
+
+<span>
+Dashboard
+</span>
+
+</a>
+
+
+<a href="transactions.html"
+class="sidebar-link">
+
+<img src="../assets/svg/income.svg" width="24">
+
+<span>
+Transaksi
+</span>
+
+</a>
+
+
+<a href="analytics.html"
+class="sidebar-link active">
+
+<img src="../assets/svg/analytics.svg" width="24">
+
+<span>
+Analitik
+</span>
+
+</a>
+
+
+
+<a href="profile.html"
+class="sidebar-link">
+
+<img src="../assets/svg/profile.svg" width="24">
+
+<span>
+Profile
+</span>
+
+</a>
+
+
+</nav>
+
+
+</aside>
+
+
+
+
+
+<main class="main">
+
+
+<header class="topbar">
+
+<h1>
+Analitik
+</h1>
+
+
+<button
+class="btn btn-outline"
+onclick="Theme.toggle()">
+
+🌙
+
+</button>
+
+
+</header>
+
+
+
+
+
+<section class="dashboard-grid">
+
+
+
+<div class="chart-card">
+
+
+<h2>
+Statistik Keuangan
+</h2>
+
+
+<div style="height:320px">
+
+
+<canvas id="analyticsChart"></canvas>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="transaction-card">
+
+
+<h2>
+Ringkasan
+</h2>
+
+
+
+<div class="stat-card">
+
+<p>
+Pemasukan
+</p>
+
+<h3 id="aIncome">
+Rp0
+</h3>
+
+</div>
+
+
+
+<div class="stat-card">
+
+<p>
+Pengeluaran
+</p>
+
+<h3 id="aExpense">
+Rp0
+</h3>
+
+</div>
+
+
+
+<div class="stat-card">
+
+<p>
+Tabungan
+</p>
+
+<h3 id="aSaving">
+Rp0
+</h3>
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<section class="card"
+style="margin-top:24px">
+
+
+<h2>
+Insight Savora
+</h2>
+
+
+<p id="insight">
+
+Belum ada data transaksi.
+
+</p>
+
+
+</section>
+
+
+
+
+</main>
+
+
+</div>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="../assets/js/storage.js"></script>
+
+<script src="../assets/js/theme.js"></script>
+
+<script src="../assets/js/transaction.js"></script>
+
+
+
+<script>
+
+
+const summary =
+{
+
+income: Transaction.total("income"),
+
+expense: Transaction.total("expense"),
+
+saving: Transaction.total("saving")
+
+};
+
+
+
+function money(value){
+
+return new Intl.NumberFormat(
+"id-ID",
+{
+style:"currency",
+currency:"IDR",
+maximumFractionDigits:0
+}
+).format(value);
+
+}
+
+
+
+aIncome.textContent =
+money(summary.income);
+
+
+aExpense.textContent =
+money(summary.expense);
+
+
+aSaving.textContent =
+money(summary.saving);
+
+
+
+
+new Chart(
+document.getElementById("analyticsChart"),
+{
+
+
+type:"bar",
+
+
+data:{
+
+
+labels:[
+
+"Pemasukan",
+"Pengeluaran",
+"Tabungan"
+
+],
+
+
+datasets:[{
+
+label:"Keuangan",
+
+data:[
+
+summary.income,
+summary.expense,
+summary.saving
+
+]
+
+}]
+
+
+},
+
+
+options:{
+
+responsive:true,
+
+maintainAspectRatio:false
+
+}
+
+
+});
+
+
+
+
+
+const insight =
+document.getElementById("insight");
+
+
+if(summary.income > summary.expense){
+
+insight.textContent =
+"Keuangan kamu terlihat positif. Pertahankan kebiasaan menabung.";
+
+}
+
+else if(summary.expense > summary.income){
+
+insight.textContent =
+"Pengeluaran lebih besar dari pemasukan. Coba evaluasi transaksi.";
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>

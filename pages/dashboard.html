@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard • Savora</title>
+
+    <meta
+        name="theme-color"
+        content="#22c55e">
+
+    <link
+        rel="icon"
+        href="../assets/svg/favicon.svg">
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/variables.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/components.css">
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+     APP
+========================================== -->
+
+<div class="app">
+
+    <!-- ==========================================
+     SIDEBAR
+========================================== -->
+
+<aside
+    class="sidebar"
+    id="sidebar">
+
+    <!-- Logo -->
+
+    <div class="sidebar-brand">
+
+        <a
+            href="../index.html"
+            class="logo">
+
+            <img
+                src="../assets/svg/logo.svg"
+                alt="Savora">
+
+            <span>Savora</span>
+
+        </a>
+
+    </div>
+
+    <!-- Navigation -->
+
+    <nav class="sidebar-nav">
+
+        <a
+            href="dashboard.html"
+            class="nav-item active">
+
+            <img
+                src="../assets/svg/wallet.svg"
+                alt="Dashboard">
+
+            <span>Dashboard</span>
+
+        </a>
+
+        <a
+            href="transactions.html"
+            class="nav-item">
+
+            <img
+                src="../assets/svg/expense.svg"
+                alt="Transactions">
+
+            <span>Transaksi</span>
+
+        </a>
+
+        <a
+            href="goals.html"
+            class="nav-item">
+
+            <img
+                src="../assets/svg/goal.svg"
+                alt="Goals">
+
+            <span>Target</span>
+
+        </a>
+
+        <a
+            href="analytics.html"
+            class="nav-item">
+
+            <img
+                src="../assets/svg/analytics.svg"
+                alt="Analytics">
+
+            <span>Analitik</span>
+
+        </a>
+
+        <a
+            href="profile.html"
+            class="nav-item">
+
+            <img
+                src="../assets/svg/profile.svg"
+                alt="Profile">
+
+            <span>Profil</span>
+
+        </a>
+
+        <a
+            href="settings.html"
+            class="nav-item">
+
+            <img
+                src="../assets/svg/settings.svg"
+                alt="Settings">
+
+            <span>Pengaturan</span>
+
+        </a>
+
+    </nav>
+
+    <!-- Footer -->
+
+    <div class="sidebar-footer">
+
+        <a
+            href="login.html"
+            class="nav-item logout">
+
+            <img
+                src="../assets/svg/delete.svg"
+                alt="Logout">
+
+            <span>Keluar</span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+    <!-- ==========================================
+     HEADER
+========================================== -->
+
+<header class="dashboard-header">
+
+    <div class="header-left">
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Toggle Sidebar">
+
+            <img
+                src="../assets/svg/menu.svg"
+                alt="Menu">
+
+        </button>
+
+        <div class="header-text">
+
+            <h1>Dashboard</h1>
+
+            <p>
+
+                Selamat datang kembali 👋
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="header-center">
+
+        <form class="search-box">
+
+            <img
+                src="../assets/svg/search.svg"
+                alt="Search">
+
+            <input
+                type="search"
+                placeholder="Cari transaksi...">
+
+        </form>
+
+    </div>
+
+    <div class="header-right">
+
+        <button
+            class="header-btn"
+            aria-label="Notification">
+
+            <img
+                src="../assets/svg/notification.svg"
+                alt="Notification">
+
+            <span class="notification-dot"></span>
+
+        </button>
+
+        <button
+            class="header-btn"
+            aria-label="Theme">
+
+            <img
+                src="../assets/svg/moon.svg"
+                alt="Theme">
+
+        </button>
+
+        <div class="profile-button">
+
+            <img
+                src="../assets/svg/profile.svg"
+                alt="Profile">
+
+            <div>
+
+                <h4>Risky</h4>
+
+                <small>Personal</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <!-- ==========================================
+     MAIN
+========================================== -->
+
+<main class="dashboard-main">
+
+    <!-- Welcome -->
+
+    <section class="welcome-card">
+
+        <div class="welcome-content">
+
+            <span class="welcome-badge">
+
+                👋 Selamat Datang
+
+            </span>
+
+            <h2>
+
+                Halo, Risky!
+
+            </h2>
+
+            <p>
+
+                Semoga harimu menyenangkan.
+                Yuk, lihat kondisi keuanganmu hari ini.
+
+            </p>
+
+        </div>
+
+        <div class="welcome-date">
+
+            <span>Jumat</span>
+
+            <h3>24 Jul 2026</h3>
+
+        </div>
+
+    </section>
+
+    <!-- Balance -->
+
+    <section class="balance-card">
+
+        <div class="balance-header">
+
+            <div>
+
+                <small>Total Saldo</small>
+
+                <h2>
+
+                    Rp12.500.000
+
+                </h2>
+
+            </div>
+
+            <span class="balance-status">
+
+                ▲ +12%
+
+            </span>
+
+        </div>
+
+        <div class="balance-info">
+
+            <div class="balance-item">
+
+                <img
+                    src="../assets/svg/income.svg"
+                    alt="Income">
+
+                <div>
+
+                    <small>Pemasukan</small>
+
+                    <h4>
+
+                        Rp5.000.000
+
+                    </h4>
+
+                </div>
+
+            </div>
+
+            <div class="balance-item">
+
+                <img
+                    src="../assets/svg/expense.svg"
+                    alt="Expense">
+
+                <div>
+
+                    <small>Pengeluaran</small>
+
+                    <h4>
+
+                        Rp1.200.000
+
+                    </h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+    <!-- ==========================================
+     QUICK ACTIONS
+========================================== -->
+
+<section class="quick-actions">
+
+    <div class="section-title">
+
+        <h3>Aksi Cepat</h3>
+
+        <a href="#">Lihat Semua</a>
+
+    </div>
+
+    <div class="actions-grid">
+
+        <button class="action-card">
+
+            <img
+                src="../assets/svg/plus.svg"
+                alt="Tambah">
+
+            <span>
+
+                Tambah
+                Transaksi
+
+            </span>
+
+        </button>
+
+        <button class="action-card">
+
+            <img
+                src="../assets/svg/income.svg"
+                alt="Income">
+
+            <span>
+
+                Tambah
+                Pemasukan
+
+            </span>
+
+        </button>
+
+        <button class="action-card">
+
+            <img
+                src="../assets/svg/expense.svg"
+                alt="Expense">
+
+            <span>
+
+                Tambah
+                Pengeluaran
+
+            </span>
+
+        </button>
+
+        <button class="action-card">
+
+            <img
+                src="../assets/svg/goal.svg"
+                alt="Goal">
+
+            <span>
+
+                Target
+                Baru
+
+            </span>
+
+        </button>
+
+        <button class="action-card">
+
+            <img
+                src="../assets/svg/report.svg"
+                alt="Report">
+
+            <span>
+
+                Laporan
+
+            </span>
+
+        </button>
+
+        <button class="action-card">
+
+            <img
+                src="../assets/svg/settings.svg"
+                alt="Settings">
+
+            <span>
+
+                Pengaturan
+
+            </span>
+
+        </button>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================
+     STATISTICS
+========================================== -->
+
+<section class="statistics">
+
+    <div class="section-title">
+
+        <h3>Ringkasan Keuangan</h3>
+
+        <span>Bulan Ini</span>
+
+    </div>
+
+    <div class="statistics-grid">
+
+        <!-- Total Saldo -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <img
+                    src="../assets/svg/wallet.svg"
+                    alt="Wallet">
+
+            </div>
+
+            <div class="stat-content">
+
+                <span>Total Saldo</span>
+
+                <h3>Rp12.500.000</h3>
+
+                <small class="positive">
+
+                    ▲ +12% dari bulan lalu
+
+                </small>
+
+            </div>
+
+        </div>
+
+        <!-- Pemasukan -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <img
+                    src="../assets/svg/income.svg"
+                    alt="Income">
+
+            </div>
+
+            <div class="stat-content">
+
+                <span>Pemasukan</span>
+
+                <h3>Rp5.000.000</h3>
+
+                <small class="positive">
+
+                    +Rp1.000.000
+
+                </small>
+
+            </div>
+
+        </div>
+
+        <!-- Pengeluaran -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <img
+                    src="../assets/svg/expense.svg"
+                    alt="Expense">
+
+            </div>
+
+            <div class="stat-content">
+
+                <span>Pengeluaran</span>
+
+                <h3>Rp1.200.000</h3>
+
+                <small class="negative">
+
+                    -Rp300.000
+
+                </small>
+
+            </div>
+
+        </div>
+
+        <!-- Target -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <img
+                    src="../assets/svg/goal.svg"
+                    alt="Goal">
+
+            </div>
+
+            <div class="stat-content">
+
+                <span>Target Tabungan</span>
+
+                <h3>72%</h3>
+
+                <small>
+
+                    3 Target Aktif
+
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================
+     FINANCIAL CHART
+========================================== -->
+
+<section class="financial-overview">
+
+    <div class="chart-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>Statistik Keuangan</h3>
+
+                <p>30 Hari Terakhir</p>
+
+            </div>
+
+            <button class="btn btn-outline">
+
+                Bulan Ini
+
+            </button>
+
+        </div>
+
+        <div class="chart-container">
+
+            <canvas id="financeChart"></canvas>
+
+        </div>
+
+    </div>
+
+    <div class="summary-card">
+
+        <div class="card-header">
+
+            <h3>Ringkasan</h3>
+
+        </div>
+
+        <div class="summary-list">
+
+            <div class="summary-item">
+
+                <div class="summary-left">
+
+                    <span class="dot income"></span>
+
+                    <span>Pemasukan</span>
+
+                </div>
+
+                <strong>Rp5.000.000</strong>
+
+            </div>
+
+            <div class="summary-item">
+
+                <div class="summary-left">
+
+                    <span class="dot expense"></span>
+
+                    <span>Pengeluaran</span>
+
+                </div>
+
+                <strong>Rp1.200.000</strong>
+
+            </div>
+
+            <div class="summary-item">
+
+                <div class="summary-left">
+
+                    <span class="dot saving"></span>
+
+                    <span>Tabungan</span>
+
+                </div>
+
+                <strong>Rp3.800.000</strong>
+
+            </div>
+
+            <div class="summary-item">
+
+                <div class="summary-left">
+
+                    <span class="dot goal"></span>
+
+                    <span>Target</span>
+
+                </div>
+
+                <strong>72%</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================
+     RECENT TRANSACTIONS
+========================================== -->
+
+<section class="recent-transactions">
+
+    <div class="card-header">
+
+        <div>
+
+            <h3>Transaksi Terbaru</h3>
+
+            <p>Aktivitas keuangan terbaru</p>
+
+        </div>
+
+        <a
+            href="transactions.html"
+            class="btn btn-outline">
+
+            Lihat Semua
+
+        </a>
+
+    </div>
+
+    <div class="transaction-list">
+
+        <!-- Transaction -->
+
+        <div class="transaction-item">
+
+            <div class="transaction-left">
+
+                <div class="transaction-icon income">
+
+                    <img
+                        src="../assets/svg/income.svg"
+                        alt="Income">
+
+                </div>
+
+                <div>
+
+                    <h4>Gaji Bulanan</h4>
+
+                    <p>Hari ini • 08:30</p>
+
+                </div>
+
+            </div>
+
+            <strong class="income">
+
+                +Rp5.000.000
+
+            </strong>
+
+        </div>
+
+        <!-- Transaction -->
+
+        <div class="transaction-item">
+
+            <div class="transaction-left">
+
+                <div class="transaction-icon expense">
+
+                    <img
+                        src="../assets/svg/expense.svg"
+                        alt="Expense">
+
+                </div>
+
+                <div>
+
+                    <h4>Makan Siang</h4>
+
+                    <p>Hari ini • 12:15</p>
+
+                </div>
+
+            </div>
+
+            <strong class="expense">
+
+                -Rp45.000
+
+            </strong>
+
+        </div>
+
+        <!-- Transaction -->
+
+        <div class="transaction-item">
+
+            <div class="transaction-left">
+
+                <div class="transaction-icon saving">
+
+                    <img
+                        src="../assets/svg/saving.svg"
+                        alt="Saving">
+
+                </div>
+
+                <div>
+
+                    <h4>Tabungan Liburan</h4>
+
+                    <p>Kemarin • 18:20</p>
+
+                </div>
+
+            </div>
+
+            <strong class="income">
+
+                +Rp500.000
+
+            </strong>
+
+        </div>
+
+        <!-- Transaction -->
+
+        <div class="transaction-item">
+
+            <div class="transaction-left">
+
+                <div class="transaction-icon expense">
+
+                    <img
+                        src="../assets/svg/wallet.svg"
+                        alt="Wallet">
+
+                </div>
+
+                <div>
+
+                    <h4>Belanja Bulanan</h4>
+
+                    <p>2 Hari Lalu</p>
+
+                </div>
+
+            </div>
+
+            <strong class="expense">
+
+                -Rp850.000
+
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ==========================================
+     SAVING GOALS
+========================================== -->
+
+<section class="saving-goals">
+
+    <div class="card-header">
+
+        <div>
+
+            <h3>Target Keuangan</h3>
+
+            <p>Pantau progres impianmu</p>
+
+        </div>
+
+        <a
+            href="goals.html"
+            class="btn btn-outline">
+
+            Kelola
+
+        </a>
+
+    </div>
+
+    <div class="goals-list">
+
+        <!-- Goal -->
+
+        <div class="goal-card">
+
+            <div class="goal-top">
+
+                <div class="goal-info">
+
+                    <img
+                        src="../assets/svg/goal.svg"
+                        alt="Goal">
+
+                    <div>
+
+                        <h4>Liburan ke Bali</h4>
+
+                        <small>
+                            Rp7.200.000 / Rp10.000.000
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <span>72%</span>
+
+            </div>
+
+            <div class="progress">
+
+                <div
+                    class="progress-bar"
+                    style="width:72%">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Goal -->
+
+        <div class="goal-card">
+
+            <div class="goal-top">
+
+                <div class="goal-info">
+
+                    <img
+                        src="../assets/svg/saving.svg"
+                        alt="Saving">
+
+                    <div>
+
+                        <h4>Laptop Baru</h4>
+
+                        <small>
+                            Rp4.500.000 / Rp8.000.000
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <span>56%</span>
+
+            </div>
+
+            <div class="progress">
+
+                <div
+                    class="progress-bar"
+                    style="width:56%">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Goal -->
+
+        <div class="goal-card">
+
+            <div class="goal-top">
+
+                <div class="goal-info">
+
+                    <img
+                        src="../assets/svg/wallet.svg"
+                        alt="Wallet">
+
+                    <div>
+
+                        <h4>Dana Darurat</h4>
+
+                        <small>
+                            Rp9.000.000 / Rp10.000.000
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <span>90%</span>
+
+            </div>
+
+            <div class="progress">
+
+                <div
+                    class="progress-bar"
+                    style="width:90%">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+     <!-- ==========================================
+     MONTHLY SUMMARY
+========================================== -->
+
+<section class="monthly-summary">
+
+    <div class="card-header">
+
+        <div>
+
+            <h3>Ringkasan Bulan Ini</h3>
+
+            <p>Performa keuangan bulan berjalan</p>
+
+        </div>
+
+    </div>
+
+    <div class="summary-grid">
+
+        <!-- Card -->
+
+        <div class="summary-box">
+
+            <img
+                src="../assets/svg/report.svg"
+                alt="Report">
+
+            <h4>128</h4>
+
+            <p>Total Transaksi</p>
+
+        </div>
+
+        <!-- Card -->
+
+        <div class="summary-box">
+
+            <img
+                src="../assets/svg/income.svg"
+                alt="Income">
+
+            <h4>Rp5.000.000</h4>
+
+            <p>Total Pemasukan</p>
+
+        </div>
+
+        <!-- Card -->
+
+        <div class="summary-box">
+
+            <img
+                src="../assets/svg/expense.svg"
+                alt="Expense">
+
+            <h4>Rp1.200.000</h4>
+
+            <p>Total Pengeluaran</p>
+
+        </div>
+
+        <!-- Card -->
+
+        <div class="summary-box">
+
+            <img
+                src="../assets/svg/goal.svg"
+                alt="Goal">
+
+            <h4>3</h4>
+
+            <p>Target Aktif</p>
+
+        </div>
+
+    </div>
+
+    <div class="summary-note">
+
+        <strong>🎉 Kerja Bagus!</strong>
+
+        <p>
+
+            Pengeluaranmu bulan ini masih berada di bawah target anggaran.
+            Pertahankan kebiasaan baik ini untuk mencapai tujuan finansialmu lebih cepat.
+
+        </p>
+
+    </div>
+
+</section>
+
+  
+    <!-- ==========================================
+     BOTTOM NAVIGATION
+========================================== -->
+
+<nav class="bottom-nav">
+
+    <a
+        href="dashboard.html"
+        class="bottom-item active">
+
+        <img
+            src="../assets/svg/wallet.svg"
+            alt="Dashboard">
+
+        <span>Beranda</span>
+
+    </a>
+
+    <a
+        href="transactions.html"
+        class="bottom-item">
+
+        <img
+            src="../assets/svg/expense.svg"
+            alt="Transactions">
+
+        <span>Transaksi</span>
+
+    </a>
+
+    <a
+        href="goals.html"
+        class="bottom-item">
+
+        <img
+            src="../assets/svg/goal.svg"
+            alt="Goals">
+
+        <span>Target</span>
+
+    </a>
+
+    <a
+        href="analytics.html"
+        class="bottom-item">
+
+        <img
+            src="../assets/svg/analytics.svg"
+            alt="Analytics">
+
+        <span>Analitik</span>
+
+    </a>
+
+    <a
+        href="profile.html"
+        class="bottom-item">
+
+        <img
+            src="../assets/svg/profile.svg"
+            alt="Profile">
+
+        <span>Profil</span>
+
+    </a>
+
+</nav>
+
+</div>
+
+    <script src="../assets/js/storage.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+
+</body>
+
+</html>

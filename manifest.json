@@ -1,0 +1,19 @@
+{
+  "name": "Savora",
+  "short_name": "Savora",
+  "description": "Smart Personal Finance & Savings Tracker",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#2E8B57",
+  "orientation": "portrait",
+  "lang": "id",
+  "icons": [
+    {
+      "src": "assets/svg/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
