@@ -41,7 +41,7 @@ Auth.logout = function() {
     );
 
     window.location.href =
-        "../login.html";
+        "login.html";
 
 };
 
@@ -90,7 +90,7 @@ Auth.guard = function() {
     ) {
 
         window.location.href =
-            "../login.html";
+            "login.html";
 
     }
 
